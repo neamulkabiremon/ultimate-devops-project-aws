@@ -7,7 +7,9 @@
 ```
 export cluster_name=demo-cluster
 ```
-
+```
+export AWS_REGION=your-region
+```
 ```
 oidc_id=$(aws eks describe-cluster --name $cluster_name --query "cluster.identity.oidc.issuer" --output text | cut -d '/' -f 5) 
 ```
